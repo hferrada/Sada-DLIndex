@@ -25,7 +25,7 @@ typedef struct {
 	SadaDocList64 *index;
 
 	char dirStore[300];		// directory to save/load the data structure (files *.dls)
-	char dirResult[300];	// directory to save tables
+	char dirResult[300];	// directory to save the results of the experiments as summary files
 
 	ulong* patterns;
 	uchar **patt;
