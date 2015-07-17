@@ -34,13 +34,19 @@ If you use them, then you need to modify the parameters in the config file. This
 
 --------------------------------------------------------------------
 [GLOBALS]
+
 TRACE = 0	# 0: do not list the trace, 1: list the trace
+
 TEST = 1	# 0: do not run the test, 1: run the test
+
 N_REP = 100 	# number of test and repetitions for experiments
+
 RUN_EXP = 1	# 0: do not run the experiments, 1: run the experiments
-MAX_M = 10	# The experiments run with initial lenght pattern, m=6, and increments this value in 4 until to reach to MAX_M
-		# The test run from length attern m=1 to m=MAX_M and for each m value run N_REP repetitions
+
+MAX_M = 10	# The experiments run with initial lenght pattern, m=6, and increments this value in 4 until to reach to MAX_M. The test run from length attern m=1 to m=MAX_M and for each m value run N_REP repetitions
+
 [DL]
+
 inputFile = /home/hferrada/text_data/cluewiki.txt # the unique input file (filesInList = 0) or the list of files (filesInList = 1)
 
 filesInList = 1		# 1: list of files (ome line = one file), 0: Unique file with all the documents of the collection
