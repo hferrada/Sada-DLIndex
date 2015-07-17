@@ -21,11 +21,9 @@ typedef struct {
 	uchar *seq;				// original sequence (1 byte for symbol)
 	ulong n;				// Length of generalize Text = T1$T2$...TD$
 	char cutDoc;			// symbol to separate documents
-	bool lowerCPatt;		// 1: transform the patterns to lowercase
 
 	SadaDocList64 *index;
 
-	bool pattFromFile;		// 0: random patterns, 1: from file (as in todoCL)
 	char dirStore[300];		// directory to save/load the data structure (files *.tk)
 	char dirResult[300];	// directory to save tables
 
@@ -62,14 +60,10 @@ int main(int argc, char *argv[]) {
 
 	strcpy(par->dirStore, ((string)(cf.Value("DL","dirStore"))).c_str());
 	strcpy(par->dirResult, ((string)(cf.Value("DL","dirResult"))).c_str());
-	par->pattFromFile = cf.Value("DL","pattFromFile");	// 0:random
-	par->lowerCPatt = cf.Value("DL","lowercase");
 
 	cout << "loadAppTopkLZ parameters..." << endl;
 	cout << "dirStore: " << par->dirStore << endl;
 	cout << "dirResult: " << par->dirResult << endl;
-	cout << "patterns from file: " << par->pattFromFile << endl;
-	cout << "lowercase patterns: " << par->lowerCPatt << endl;
 
 	par->index = new SadaDocList64(par->dirStore);
 	par->n = par->index->n;
