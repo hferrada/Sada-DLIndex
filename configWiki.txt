@@ -1,21 +1,16 @@
 [GLOBALS]
 TRACE = 0
 TEST = 1
-N_REP = 200
+N_REP = 100
 RUN_EXP = 1
 MAX_M = 10
 
-[TOPK]
-TODOCL = 0
-CREATE_TABLE = 1
-GOODPATT = 0
-RECALL = 0
-g = 32
-inputFile = /home/hferrada/text_data/DR/wikipedia_40.txt
+[DL]
+inputFile = /home/hferrada/text_data/cluewiki.txt
 filesInList = 1
-dirStore = /home/hferrada/drf/upSiteTest/LZ-AppTopk/wiki/
-dirResult = /home/hferrada/drf/upSiteTest/LZ-AppTopk/wiki/
-pattFromFile = 0
-lowercase = 0
-boundSymbol = 0
+boundSymbol = 1
 cutDoc = 1
+dirStore = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/
+dirResult = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/cluewiki_
+pattFromFile = 0
+lowercase = 1
