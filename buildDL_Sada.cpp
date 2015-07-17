@@ -18,15 +18,14 @@ uint MAX_M = 10;
 typedef struct {
 	uchar *seq;				// original sequence (1 byte for symbol)
 	ulong n;				// Length of generalize Text = T1$T2$...TD$
-	char cutDoc;			// symbol to separate documents
+	char cutDoc;			// new symbol to separate documents
 	SadaDocList64 *index;
 
 	ulong* EndDocs;			// this store the final phrase number for each document. This is no include in the final structure
 
 	string configFile;		// properties file
 	char inputFile[200];	// list of files
-	bool lowercase;			// 1: transform to lowercase
-	bool filesInList;			// 1: list of files, 0: Unique file
+	bool filesInList;		// 1: list of files, 0: Unique file
 	char boundSymbol;		// original symbol delimiter of documents when we read all documents in 1 file.
 	char dirStore[200];		// directory to save/load the data structure (files *.tk)
 
@@ -61,7 +60,6 @@ int main(int argc, char *argv[]) {
 	par->filesInList = cf.Value("DL","filesInList");
 	par->boundSymbol = cf.Value("DL","boundSymbol");
 	par->cutDoc = cf.Value("DL","cutDoc");
-	par->lowercase = cf.Value("DL","lowercase");
 	strcpy(par->dirStore, ((string)(cf.Value("DL","dirStore"))).c_str());
 
 	cout << "buildDL_LZ config parameters..." << endl;
@@ -69,7 +67,6 @@ int main(int argc, char *argv[]) {
 	cout << "Files in list         : " << par->filesInList << endl;
 	cout << "Boundary Symbol(code) : " << (int)par->boundSymbol << endl;
 	cout << "Cut Doc. Symbol(code) : " << (int)par->cutDoc << endl;
-	cout << "Lowercase             : " << par->lowercase << endl;
 	cout << "Store Folder          : " << par->dirStore << endl;
 	cout << "Sampling <SA, SA^-1>  : <" << SaS << ", " << SaI << ">" << endl;
 
