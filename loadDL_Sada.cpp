@@ -24,7 +24,7 @@ typedef struct {
 
 	SadaDocList64 *index;
 
-	char dirStore[300];		// directory to save/load the data structure (files *.tk)
+	char dirStore[300];		// directory to save/load the data structure (files *.dls)
 	char dirResult[300];	// directory to save tables
 
 	ulong* patterns;
