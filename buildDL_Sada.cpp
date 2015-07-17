@@ -27,7 +27,7 @@ typedef struct {
 	char inputFile[200];	// list of files
 	bool filesInList;		// 1: list of files, 0: Unique file
 	char boundSymbol;		// original symbol delimiter of documents when we read all documents in 1 file.
-	char dirStore[200];		// directory to save/load the data structure (files *.tk)
+	char dirStore[200];		// directory to save/load the data structure (files *.dls)
 
 	// The following data structure are only for test !!
 	ulong* patterns;
