@@ -32,30 +32,38 @@ Config File example
 It is not necesary uses the files buildDL_Sada.cpp and loadDL_Sada.cpp to generate the binaries files. These are only examples.
 If you use them, then you need to modify the parameters in the config file. This is the format:
 
-------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------
 [GLOBALS]
-TRACE = 0				# 0: do not list the trace, 1: list the trace
-TEST = 1					# 0: do not run the test, 1: run the test
-N_REP = 100 			# number of test and repetitions for experiments
-RUN_EXP = 1				# 0: do not run the experiments, 1: run the experiments
-MAX_M = 10				# The experiments run with initial lenght pattern, m=6, and increments this value in 4 until to reach to MAX_M
-							# The test run from length attern m=1 to m=MAX_M and for each m value run N_REP repetitions
+TRACE = 0	# 0: do not list the trace, 1: list the trace
+TEST = 1	# 0: do not run the test, 1: run the test
+N_REP = 100 	# number of test and repetitions for experiments
+RUN_EXP = 1	# 0: do not run the experiments, 1: run the experiments
+MAX_M = 10	# The experiments run with initial lenght pattern, m=6, and increments this value in 4 until to reach to MAX_M
+		# The test run from length attern m=1 to m=MAX_M and for each m value run N_REP repetitions
 [DL]
 inputFile = /home/hferrada/text_data/cluewiki.txt
 # 'inputFile' is the # the unique input file (filesInList = 0) or the list of files (filesInList = 1)
+
 filesInList = 1		# 1: list of files (ome line = one file), 0: Unique file with all the documents of the collection
+
 boundSymbol = 1		# original symbol delimiter of documents when we read all documents in one file.
+
 cutDoc = 1				# new symbol to separate documents
+
 dirStore = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/	
 # 'dirStore' is the directory to save/load the data structure (files *.dls)
+
 dirResult = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/cluewiki_ 
 # 'dirResult' is the directory to save the results of the experiments as summary files
-------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------
 
 References: Please, if you want to include this tool as part of your experiments, in your references include the two papers above. Later, it will appear another publication to replace these ones.
 
 [1] K. Sadakane. Space-efficient data structures for flexible text retrieval systems. 
     In Proc. 13th International Conference on Algorithms and Computation (ISAAC), pages 14–24, 2002.
+    
 [2] J. Fischer and V. Heun. Space-efficient preprocessing schemes for range minimum queries on static arrays. 
     SIAM Journal on Computing, 40(2):465–492, 2011.
+    
 [3] K. Sadakane. Fully-Functional Static and Dynamic Succinct Trees. ACM Transactions on Algorithms 10(3):article 16, 2014
