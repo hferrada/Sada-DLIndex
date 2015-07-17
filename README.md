@@ -41,20 +41,17 @@ RUN_EXP = 1	# 0: do not run the experiments, 1: run the experiments
 MAX_M = 10	# The experiments run with initial lenght pattern, m=6, and increments this value in 4 until to reach to MAX_M
 		# The test run from length attern m=1 to m=MAX_M and for each m value run N_REP repetitions
 [DL]
-inputFile = /home/hferrada/text_data/cluewiki.txt
-# 'inputFile' is the # the unique input file (filesInList = 0) or the list of files (filesInList = 1)
+inputFile = /home/hferrada/text_data/cluewiki.txt # the unique input file (filesInList = 0) or the list of files (filesInList = 1)
 
 filesInList = 1		# 1: list of files (ome line = one file), 0: Unique file with all the documents of the collection
 
 boundSymbol = 1		# original symbol delimiter of documents when we read all documents in one file.
 
-cutDoc = 1				# new symbol to separate documents
+cutDoc = 1		# new symbol to separate documents
 
-dirStore = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/	
-# 'dirStore' is the directory to save/load the data structure (files *.dls)
+dirStore = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/	# the directory to save/load the data structure (files *.dls)
 
-dirResult = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/cluewiki_ 
-# 'dirResult' is the directory to save the results of the experiments as summary files
+dirResult = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/cluewiki_ # the directory to save the results of the experiments as summary files
 
 --------------------------------------------------------------------
 
