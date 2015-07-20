@@ -3,11 +3,11 @@ This is the full-text index of Sadakane [1] to solve DL. In this we use the FMI 
 
 Authors: Hector Ferrada and Gonzalo Navarro hferrada@dcc.uchile.cl, gnavarro@dcc.uchile.cl
 
-Description: This is a compressed full-text index to solve document listing. The implementation is based on the method of Sadakane [1]. 
-In that paper he uses his CSA to index the input collection. As we did not found a 64-bit version for his CSA, we have used a 64-bit version of a FMI to replace it. The FMI is a free code, included in the sdsl-library of S. Gog (https://github.com/simongog/sdsl-lite).
-Then it is necessary to install sdsl-library to run this index.
-In order to compute RMQs we use our own implementation, which is based on the method of Fischer and Heun [2]. For the tree representation needed in [2] we use a light version of the Range Min-Max Tree of Sadakane and Navarro [3].
-This RMQ structure and also other basic functions needed in the code are in our small library called DRF_Utils64. Then you have to download it and compile it to run the index (https://github.com/hferrada/DRF_Utils64.git)
+Description: This is a compressed full-text index to solve document listing. The implementation is based on the method of Sadakane [1].  
+In that paper he uses his CSA to index the input collection. As we did not found a 64-bit version for his CSA, we have used a 64-bit version of a FMI to replace it. The FMI is a free code, included in the sdsl-library of S. Gog (https://github.com/simongog/sdsl-lite).  
+Then it is necessary to install sdsl-library to run this index.  
+In order to compute RMQs we use our own implementation, which is based on the method of Fischer and Heun [2]. For the tree representation needed in [2] we use a light version of the Range Min-Max Tree of Sadakane and Navarro [3].  
+This RMQ structure and also other basic functions needed in the code are in our small library called DRF_Utils64. Then you have to download it and compile it to run the index (https://github.com/hferrada/DRF_Utils64.git)  
 
 COMPILE, MAKE and LINKING
 =========================
@@ -36,24 +36,24 @@ If you use them, then you need to modify the parameters in the config file. This
 --------------------------------------------------------------------
 [GLOBALS]  
 
-TRACE = 0	# 0: do not list the trace, 1: list the trace  
-TEST = 1	# 0: do not run the test, 1: run the test  
+TRACE = 0	   # 0: do not list the trace, 1: list the trace  
+TEST = 1	    # 0: do not run the test, 1: run the test  
 N_REP = 100 	# number of test and repetitions for experiments  
-RUN_EXP = 1	# 0: do not run the experiments, 1: run the experiments  
-MAX_M = 10	# The experiments run with initial lenght pattern, m=6, and increments this value in  
+RUN_EXP = 1	 # 0: do not run the experiments, 1: run the experiments  
+MAX_M = 10	  # The experiments run with initial lenght pattern, m=6, and increments this value in  
             # 4 until to reach to MAX_M. The test run from length attern m=1 to m=MAX_M and for  
             # each m value run N_REP repetitions   
 
 [DL]  
 inputFile = /home/hferrada/text_data/cluewiki.txt  
-                  # the unique input file (filesInList = 0) or the list of files (filesInList = 1)
+# a unique input file (filesInList = 0) or a list of files (filesInList = 1)
 filesInList = 1		# 1: list of files (one line for file), 0: Unique file with all the documents of the collection  
 boundSymbol = 1		# original symbol delimiter of documents when we read all documents in one file.  
 cutDoc = 1		    # new symbol to separate documents  
 dirStore = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/  	
-                  # the directory to save/load the data structure (files *.dls)  
+# the directory to save/load the data structure (files *.dls)  
 dirResult = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/cluewiki_  
-                  # the directory to save the results of the experiments as summary files  
+# the directory to save the results of the experiments as summary files  
 --------------------------------------------------------------------  
 
 References: Please, if you want to include this tool as part of your experiments, in your references include the two papers above. Later, it will appear another publication to replace these ones.  
