@@ -51,7 +51,8 @@ boundSymbol = 1		# original symbol delimiter of documents when we read all docum
 cutDoc = 1		    # new symbol to separate documents  
 dirStore = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/  # the directory to save/load the data structure (files *.dls)  
 dirResult = /home/hferrada/drf/upSiteTest/Sada-DLIndex/cluewiki/cluewiki_  # the directory to save the results of the experiments as summary files  
---------------------------------------------------------------------  
+
+  
 
 References: Please, if you want to include this tool as part of your experiments, in your references include the two papers above. Later, it will appear another publication to replace these ones.  
 
