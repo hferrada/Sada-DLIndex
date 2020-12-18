@@ -13,7 +13,7 @@ COMPILE, MAKE and LINKING
 =========================
 
 1.- Install sdsl-library. Download it from https://github.com/simongog/sdsl-lite and follow the specifications given there.  
-2.- Install DRF_Utils64 library. Download it from https://github.com/simongog/sdsl-lite and follow the specifications given there.  
+2.- Install DRF_Utils64 library. Download it from https://github.com/hferrada/DRF_Utils64 and follow the specifications given there.  
 3.- Edit the Makefile file included in the folder 'Sada-DLIndex' and modify the next lines:  
 In the line INCLUDES, you put the path of directory 'include' in where are the header files "divsufsort.h" and"divsufsort.h" and the directory sdsl with all header of the library. For example:  
 INCLUDES=-I/home/hferrada/include/ -I/home/hferrada/drf/dir64/DRF_Utils64/includes/  
